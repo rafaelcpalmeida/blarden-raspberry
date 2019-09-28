@@ -7,7 +7,7 @@ help:
   @echo "***********************************************************"
   @echo ""
 
-install:
+fetch:
   @echo ""
   @echo "*************************************************************"
   @echo "* Fetching necessary dependencies. This may take a while... *"
