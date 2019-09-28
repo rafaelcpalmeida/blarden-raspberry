@@ -14,11 +14,11 @@ fetch:
 	@echo "*************************************************************"
 	@echo ""
 	go get
-  
+
 build:
 	@echo ""
 	@echo "********************************************"
 	@echo "* Building source code into binary file... *"
 	@echo "********************************************"
 	@echo ""
-	env GOOS=linux GOARCH=arm GOARM=6 go build
+	env GOOS=linux GOARCH=arm GOARM=6 go build -o open-door open-door.go
