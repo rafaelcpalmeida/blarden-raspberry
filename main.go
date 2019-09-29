@@ -10,5 +10,5 @@ func main() {
             "status": "open",
         })
     })
-    r.Run(":80")
+    r.Run()
 }
