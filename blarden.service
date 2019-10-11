@@ -3,7 +3,7 @@ Description=Blardem systemd service.
 
 [Service]
 Type=simple
-ExecStart=/bin/bash /usr/local/bin/blarden-raspberry
+ExecStart=/usr/local/bin/blarden-raspberry
 
 [Install]
 WantedBy=multi-user.target
