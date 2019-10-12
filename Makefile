@@ -1,10 +1,12 @@
 help:
         @echo ""
-        @echo "***********************************************************"
-        @echo "* Available commands:                                     *"
-        @echo "*   ► fetch - fetches all required dependencies           *"
-        @echo "*   ► build - compiles source code into runnable binaries *"
-        @echo "***********************************************************"
+        @echo "**************************************************************************"
+        @echo "* Available commands:                                                    *"
+        @echo "*   ► fetch - fetches all required dependencies                          *"
+        @echo "*   ► build - compiles source code into runnable binaries                *"
+        @echo "*   ► install - creates new service and moves binary to proper location  *"
+        @echo "*   ► update - moves binary to proper location                           *"
+        @echo "**************************************************************************"
         @echo ""
 
 fetch:
