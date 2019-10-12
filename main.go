@@ -107,6 +107,7 @@ func main() {
 	})
 
 	r.POST("/open-door", api2apiValidationMiddleware(), func(c *gin.Context) {
+		OpenDoor()
 		log.Info("I've opened the door")
 		c.JSON(200, gin.H{
 			"status": "open",
