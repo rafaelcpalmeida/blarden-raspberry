@@ -38,3 +38,11 @@ install:
         sudo cp blarden.service /etc/systemd/system/blarden.service
         sudo chmod 644 /etc/systemd/system/blarden.service
         sudo systemctl enable blarden
+
+update:
+        @echo ""
+        @echo "*************************************************"
+        @echo "* Placing binary file on /usr/local/bin path... *"
+        @echo "*************************************************"
+        @echo ""
+        sudo mv blarden-raspberry /usr/local/bin
