@@ -48,3 +48,4 @@ update:
         @echo "*************************************************"
         @echo ""
         sudo mv blarden-raspberry /usr/local/bin
+        sudo systemctl restart blarden
