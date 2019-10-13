@@ -4,6 +4,7 @@ Description=Blardem systemd service.
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/blarden-raspberry
+EnvironmentFile=/etc/blarden/blarden.conf
 
 [Install]
 WantedBy=multi-user.target
