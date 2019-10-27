@@ -117,7 +117,7 @@ func main() {
     })
 
     r.POST("/garage-gate", api2apiValidationMiddleware(), func(c *gin.Context) {
-        resp, err := http.Get("http://LOCAL_IP/garage-gate")
+        resp, err := http.Get("http://LOCAL_IP/garage-gate/" + os.Getenv("INTERNAL_COMMUNICATION_KEY"))
 
         if err != nil {
             log.Fatalln(err)
@@ -142,7 +142,7 @@ func main() {
     })
 
     r.POST("/outside-gate", api2apiValidationMiddleware(), func(c *gin.Context) {
-        resp, err := http.Get("http://LOCAL_IP/outside-gate")
+        resp, err := http.Get("http://LOCAL_IP/outside-gate/" + os.Getenv("INTERNAL_COMMUNICATION_KEY"))
 
         if err != nil {
             log.Fatalln(err)

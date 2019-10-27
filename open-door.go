@@ -7,7 +7,7 @@ import (
     "github.com/stianeikeland/go-rpio/v4"
 )
 
-func main() {
+func OpenDoor() {
     err := rpio.Open()
   
     if err != nil {
