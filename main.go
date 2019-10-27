@@ -116,7 +116,7 @@ func main() {
         })
     })
 
-    r.GET("/garage-gate", api2apiValidationMiddleware(), func(c *gin.Context) {
+    r.POST("/garage-gate", api2apiValidationMiddleware(), func(c *gin.Context) {
         resp, err := http.Get("http://LOCAL_IP/garage-gate")
 
         if err != nil {
@@ -141,7 +141,7 @@ func main() {
         c.AbortWithStatus(500)
     })
 
-    r.GET("/outside-gate", api2apiValidationMiddleware(), func(c *gin.Context) {
+    r.POST("/outside-gate", api2apiValidationMiddleware(), func(c *gin.Context) {
         resp, err := http.Get("http://LOCAL_IP/outside-gate")
 
         if err != nil {
