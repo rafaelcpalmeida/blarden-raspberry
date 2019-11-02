@@ -9,6 +9,8 @@ import (
 
 func OpenDoor() {
     err := rpio.Open()
+
+    defer rpio.Close()
   
     if err != nil {
         panic(fmt.Sprint("unable to open gpio", err.Error()))
@@ -20,6 +22,4 @@ func OpenDoor() {
     pin.High()
     time.Sleep(1 * time.Second)
     pin.Low()
-  
-    rpio.Close()
 }
