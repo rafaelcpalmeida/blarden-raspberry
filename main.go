@@ -15,12 +15,12 @@ import (
 )
 
 type Request struct {
-    Message string `json: "message"`
+    Message string `json:"message"`
 }
 
 type Payload struct {
-    Key string `json: "key"`
-    Timestamp int64 `json: "timestamp"`
+    Key string `json:"key"`
+    Timestamp int64 `json:"timestamp"`
 }
 
 func Decrypt(ciphertext []byte, key *[32]byte) (plaintext []byte, err error) {
@@ -117,7 +117,7 @@ func main() {
     })
 
     r.POST("/garage-gate", api2apiValidationMiddleware(), func(c *gin.Context) {
-        resp, err := http.Get("http://LOCAL_IP/garage-gate/" + os.Getenv("INTERNAL_COMMUNICATION_KEY"))
+        resp, err := http.Get("http://blarden-mcu/garage-gate/" + os.Getenv("INTERNAL_COMMUNICATION_KEY"))
 
         if err != nil {
             log.Fatalln(err)
@@ -142,7 +142,7 @@ func main() {
     })
 
     r.POST("/outside-gate", api2apiValidationMiddleware(), func(c *gin.Context) {
-        resp, err := http.Get("http://LOCAL_IP/outside-gate/" + os.Getenv("INTERNAL_COMMUNICATION_KEY"))
+        resp, err := http.Get("http://blarden-mcu/outside-gate/" + os.Getenv("INTERNAL_COMMUNICATION_KEY"))
 
         if err != nil {
             log.Fatalln(err)
